@@ -2,7 +2,7 @@
 
  
 
-const UpperHeader = () => {
+export  function UpperHeader()  {
   return(
     <div className="h-[48px] w-full p-3 bg-black text-white hidden md:flex items-centre justify-between ">
 
@@ -18,10 +18,7 @@ const UpperHeader = () => {
       </p>
     
          
-         
            </div>
-
-
 
     </div>
 
@@ -29,32 +26,27 @@ const UpperHeader = () => {
   )
 }
 
-export default UpperHeader;
 
-import Link from "next/link";
 
-export const LowerHeader = () => {
+import { IoChevronDown } from "react-icons/io5";
+export default function LowerHeader () {
   return(
     <header className="flex border-b py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50">
   <div className="flex md:text-2xl flex-wrap items-center gap-5 w-full">
-    <h1 className="md:text-2xl text-base text-black font-bold ml-20">SHOP.CO</h1>
+    <h1 className="md:text-2xl text-base text-black font-extrabold ml-20">SHOP.CO</h1>
   
           <div className="items-centre justify-center flex px-3 ml-15 gap-3">
             <ul className="items-centre justify-center flex px-3 gap-3 ml-15">
               
-            <a
-             href="/shop" 
-               className="mx-lg:border-b max-lg:py-3"
-           >
-            <li className="lgpx-3lg:hover:text-[#007bff] text-black block font-semibold text-[15px]">
-            
-            Shop
-          
+            <a href="/shop"
+            className="max-lg:border-b max-lg:py-3"> 
+            <li className="lgpx-3lg:hover:text-[#007bff] text-black block font-semibold text-[15px] flex items-centre justify-centre">     
+            Shop <IoChevronDown />      
         </li>
         </a>
               
         <a 
-        href="/OnSale"
+        href="/on-sale"
          className="max-lg:border-b max-lg:py-3"> 
         <li className="px-3lg:hover:text-[#007bff] text-black block font-semibold text-[15px]"
             >
@@ -65,22 +57,26 @@ export const LowerHeader = () => {
 
       
 
-        <li className="max-lg:border-b max-lg:py-3 px-3">
+        
           <a
             href="/Newarrivals"
-            className="lg:hover:text-[#007bff] text-gray-800 block font-semibold text-[15px]"
-          >
+              className="max-lg:border-b max-lg:py-3"> 
+        <li className="px-3lg:hover:text-[#007bff] text-black block font-semibold text-[15px]">
             New Arrivals
-          </a>
+          
         </li>
-        <li className="max-lg:border-b max-lg:py-3 px-3">
+
+        </a>
+
+        
           <a 
             href="/Brands"
-            className="lg:hover:text-[#007bff] text-black block font-semibold text-[15px]"
-          >
+              className="max-lg:border-b max-lg:py-3"> 
+        <li className="px-3lg:hover:text-[#007bff] text-black block font-semibold text-[15px]">
             Brands
-          </a>
+          
         </li>
+        </a>
 
       </ul>
     </div>
